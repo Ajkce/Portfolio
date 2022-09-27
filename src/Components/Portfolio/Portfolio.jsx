@@ -135,29 +135,7 @@ function Portfolio() {
   const text1 = useRef();
   const text2 = useRef();
 
-
   useEffect(() => {
-
-    const text = gsap.timeline({
-      scrollTrigger: {
-        trigger: text1.current,
-        markers: true,
-        toggleActions: 'restart, none, reverse, none'
-       
-      },
-    });
-    
-    text.from(text1, {
-     
-      x: 200,
-      duration: 2,
-    });
-  })
-
-  useEffect(() => {
-
-
-
     const to = gsap.timeline({
       scrollTrigger: {
         trigger: port1.current,
@@ -260,18 +238,12 @@ function Portfolio() {
 
   const [length, setLength] = useState(0);
 
-
   useEffect(() => {
     setLength(svg.current.getTotalLength() + 75);
-    console.log(length)
-   
-   
+    console.log(length);
   }, []);
-  
-  
- 
+
   // The start position of the drawing
- 
 
   // Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
 
@@ -302,36 +274,28 @@ function Portfolio() {
       // intersects viewport top
 
       const value = ((viewBottom - elementTop) / window.innerHeight) * 2;
-      if(value <= 0.30){
-        percentage = 0
-      }if(value >= 0.30 && value <= 1.30){
-        percentage = value - 0.30
-      }else if(value >= 1.30){
-        percentage = 1
+      if (value <= 0.3) {
+        percentage = 0;
       }
-      console.log('value' + value)
-      console.log('percentage' + percentage)
+      if (value >= 0.3 && value <= 1.3) {
+        percentage = value - 0.3;
+      } else if (value >= 1.3) {
+        percentage = 1;
+      }
+      console.log("value" + value);
+      console.log("percentage" + percentage);
     }
 
     var draw = length * percentage;
 
     // Reverse the drawing (when scrolling upwards)
-   
+
     svg.current.style.strokeDashoffset = length - draw;
     const translate = (100 * percentage) / 2;
 
-    text1.current.style.transform = `translateX(${translate}px)`
-    text2.current.style.transform = `translateX(-${translate}px)`
+    text1.current.style.transform = `translateX(${translate}px)`;
+    text2.current.style.transform = `translateX(-${translate}px)`;
   }
-
-
-
-
-
-
-
-
-
 
   return (
     <section className="portfolio-section pt-100" id="portfolio">
