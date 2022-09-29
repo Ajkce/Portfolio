@@ -239,7 +239,7 @@ function Portfolio() {
   const [length, setLength] = useState(0);
 
   useEffect(() => {
-    setLength(svg.current.getTotalLength() + 75);
+    setLength(1000);
     console.log(length);
   }, []);
 
