@@ -11,6 +11,7 @@ import Githubuser from "../../img/Github.PNG";
 import Backroad from "../../img/Backroad.PNG";
 import Comfy from "../../img/Comfy.PNG";
 import Jobster from "../../img/Jobster.PNG";
+import Jobify from '../../img/jobify.PNG';
 
 function Portfolio() {
   gsap.registerPlugin(ScrollTrigger);
@@ -43,7 +44,7 @@ function Portfolio() {
       Id: 2,
       title: "jobster",
       type: "react",
-      img: Jobster,
+      img: Jobify,
       desc: "A react-redux project which helps users to keep track of the job applications progress. It involves all the crud application like create, read, update and delete operations.",
       tools: [
         {
@@ -80,6 +81,29 @@ function Portfolio() {
         {
           id: 3,
           name: "Javascript",
+        },
+      ],
+      github: "https://github.com/Ajkce/Comfy",
+      website: "https://comfy-ajaya.netlify.app",
+    },
+    {
+      Id: 5,
+      title: "Jobify",
+      type: "node",
+      img: Jobster,
+      desc: "A complete MERN stack crud application project which can be used for job tracking for users. It has the functionality of creating users, authentication functionality, crud operations like: create job, read job, edit job as well as delete jobs ",
+      tools: [
+        {
+          id: 1,
+          name: "React",
+        },
+        {
+          id: 2,
+          name: "Node JS",
+        },
+        {
+          id: 3,
+          name: "Mongoose",
         },
       ],
       github: "https://github.com/Ajkce/Comfy",
@@ -366,7 +390,7 @@ function Portfolio() {
                 <button
                   type="button"
                   key={btn.id}
-                  className={active === btn.id ? "active" : ""}
+                  className={active == btn.id ? "active" : ""}
                   id={btn.id}
                   value={btn.value}
                   onClick={setItems}
@@ -380,7 +404,7 @@ function Portfolio() {
         <div className="row">
           {data.map((item) => {
             return (
-              <div className="portfolio-item" key={item.Id} ref={port3}>
+              <div className="portfolio-item " key={item.Id} ref={port3}>
                 <div className="portfolio-item-inner">
                   <div className="portfolio-img">
                     <img src={item.img} alt="" />
