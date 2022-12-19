@@ -11,7 +11,8 @@ import Githubuser from "../../img/Github.PNG";
 import Backroad from "../../img/Backroad.PNG";
 import Comfy from "../../img/Comfy.PNG";
 import Jobster from "../../img/Jobster.PNG";
-import Jobify from '../../img/jobify.PNG';
+import Jobify from "../../img/jobify.PNG";
+import Ecommerce from "../../img/Ecommerce.PNG";
 
 function Portfolio() {
   gsap.registerPlugin(ScrollTrigger);
@@ -19,26 +20,26 @@ function Portfolio() {
   const items = [
     {
       Id: 1,
-      title: "Search Github-Users",
+      title: "Ecommerce App",
       type: "react",
-      img: Githubuser,
-      desc: "A github users search application project where data is fetched using github api. It displays the searched users github account details in an interactive chart format",
+      img: Ecommerce,
+      desc: "A complete ecommerce application created using react js library. It utilizes react hooks, react router, react-redux any many other react functionalities. It has the functionalities like viewing products with grid or list layout, filter products, search functionality as well as cart and checkout functionality.",
       tools: [
         {
           id: 1,
-          name: "React",
+          name: "HTML",
         },
         {
           id: 2,
-          name: "Styled Components",
+          name: "CSS",
         },
         {
           id: 3,
-          name: "Auth 0",
+          name: "React",
         },
       ],
-      github: "https://github.com/Ajkce/Github-users",
-      website: "https://ajaya-projects-github-users.netlify.app/",
+      github: "https://github.com/Ajkce/Comfy",
+      website: "https://ajaya-comfy.netlify.app",
     },
     {
       Id: 2,
@@ -65,6 +66,30 @@ function Portfolio() {
     },
     {
       Id: 3,
+      title: "Search Github-Users",
+      type: "react",
+      img: Githubuser,
+      desc: "A github users search application project where data is fetched using github api. It displays the searched users github account details in an interactive chart format",
+      tools: [
+        {
+          id: 1,
+          name: "React",
+        },
+        {
+          id: 2,
+          name: "Styled Components",
+        },
+        {
+          id: 3,
+          name: "Auth 0",
+        },
+      ],
+      github: "https://github.com/Ajkce/Github-users",
+      website: "https://ajaya-projects-github-users.netlify.app/",
+    },
+
+    {
+      Id: 6,
       title: "Comfy",
       type: "javascript",
       img: Comfy,
@@ -414,7 +439,19 @@ function Portfolio() {
                   </div>
                   <div className="portfolio-info">
                     <h4>{item.title}</h4>
-                    <h3>React / Auth 0 / Stripe</h3>
+                    <h3>
+                      {item.tools.map((tool) => {
+                        if (tool.id > 1) {
+                          return (
+                            <span key={tool.id}>
+                              {" / "}{tool.name} 
+                            </span>
+                          );
+                        } else {
+                          return <span key={tool.id}>{tool.name}</span>;
+                        }
+                      })}
+                    </h3>
                     <div className="button">
                       <button
                         className="btn btn-yellow"
