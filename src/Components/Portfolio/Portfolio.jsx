@@ -131,6 +131,28 @@ function Portfolio() {
       ],
       github: "https://github.com/Ajkce/tours",
       website: "https://vanilla-js-backroad-project.netlify.app",
+    }, {
+      Id: 6,
+      title: "Ecommerce App",
+      type: "react",
+      img: Comfy,
+      desc: "A sample ecommerce project created using vanilla js. It utilises javascript array funcation to search, filter, sort and select the products based on specific properties.",
+      tools: [
+        {
+          id: 1,
+          name: "HTML",
+        },
+        {
+          id: 2,
+          name: "CSS",
+        },
+        {
+          id: 3,
+          name: "Javascript",
+        },
+      ],
+      github: "https://github.com/Ajkce/Comfy",
+      website: "https://ajaya-comfy.netlify.app",
     },
   ];
 
