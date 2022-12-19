@@ -116,7 +116,7 @@ function Education() {
         <div className="row align-items-center ">
           <div className="section-title column align-items-center  ">
             <h5 className="sub-title ">Education</h5>
-            <h3 className="main-title">My Educatioal Qualification</h3>
+            <h3 className="main-title">My Educational Qualification</h3>
 
             <ul className="line" ref={edu1}>
               <li></li>
