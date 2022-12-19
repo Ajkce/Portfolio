@@ -42,28 +42,29 @@ function Portfolio() {
       website: "https://ajaya-comfy.netlify.app",
     },
     {
-      Id: 2,
-      title: "jobster",
-      type: "react",
-      img: Jobify,
-      desc: "A react-redux project which helps users to keep track of the job applications progress. It involves all the crud application like create, read, update and delete operations.",
+      Id: 5,
+      title: "Jobify",
+      type: "node",
+      img: Jobster,
+      desc: "A complete MERN stack crud application project which can be used for job tracking for users. It has the functionality of creating users, authentication functionality, crud operations like: create job, read job, edit job as well as delete jobs ",
       tools: [
         {
           id: 1,
-          name: "React-redux",
+          name: "React",
         },
         {
           id: 2,
-          name: "Axios",
+          name: "Node JS",
         },
         {
           id: 3,
-          name: "Styled Components",
+          name: "Mongoose",
         },
       ],
-      github: "https://github.com/Ajkce/Jobster",
+      github: "https://github.com/Ajkce/Comfy",
       website: "https://react-jobster.netlify.app",
     },
+    
     {
       Id: 3,
       title: "Search Github-Users",
@@ -111,29 +112,7 @@ function Portfolio() {
       github: "https://github.com/Ajkce/Comfy",
       website: "https://comfy-ajaya.netlify.app",
     },
-    {
-      Id: 5,
-      title: "Jobify",
-      type: "node",
-      img: Jobster,
-      desc: "A complete MERN stack crud application project which can be used for job tracking for users. It has the functionality of creating users, authentication functionality, crud operations like: create job, read job, edit job as well as delete jobs ",
-      tools: [
-        {
-          id: 1,
-          name: "React",
-        },
-        {
-          id: 2,
-          name: "Node JS",
-        },
-        {
-          id: 3,
-          name: "Mongoose",
-        },
-      ],
-      github: "https://github.com/Ajkce/Comfy",
-      website: "https://comfy-ajaya.netlify.app",
-    },
+    
     {
       Id: 4,
       title: "Tours-project",
@@ -156,6 +135,29 @@ function Portfolio() {
       ],
       github: "https://github.com/Ajkce/tours",
       website: "https://vanilla-js-backroad-project.netlify.app",
+    },
+    {
+      Id: 2,
+      title: "jobster",
+      type: "react",
+      img: Jobify,
+      desc: "A react-redux project which helps users to keep track of the job applications progress. It involves all the crud application like create, read, update and delete operations.",
+      tools: [
+        {
+          id: 1,
+          name: "React-redux",
+        },
+        {
+          id: 2,
+          name: "Axios",
+        },
+        {
+          id: 3,
+          name: "Styled Components",
+        },
+      ],
+      github: "https://github.com/Ajkce/Jobster",
+      website: "https://react-jobster.netlify.app",
     },
   ];
 

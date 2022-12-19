@@ -4,11 +4,18 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 function Navbar() {
   window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 50) {
-      document.querySelector(".nav").classList.add("sticky");
-    } else {
-      document.querySelector(".nav").classList.remove("sticky");
+    const sticky = document.querySelector(".nav")
+    if(sticky.classList.contains('responsive')){
+      return;
+    }else{
+      if (window.pageYOffset > 50) {
+        document.querySelector(".nav").classList.add("sticky");
+      } else {
+        document.querySelector(".nav").classList.remove("sticky");
+      }
+
     }
+   
   });
 
   const scrollToTop = () => {
@@ -19,9 +26,12 @@ function Navbar() {
     document.querySelector(".nav").classList.toggle("responsive");
     document.body.classList.toggle("body-fixed");
     document.querySelector(".menu").classList.toggle("visible");
-    document.querySelector(".sticky").classList.toggle("sticky-responsive");
+    const sticky = document.querySelector(".sticky");
+    if(sticky){
 
-  }
+      document.querySelector(".sticky").classList.toggle("sticky-responsive");
+    }
+  };
 
   return (
     <div className="nav ">
@@ -30,7 +40,7 @@ function Navbar() {
           {/* Left side Navbar */}
           <div className="nav_Left">
             <div className="row">
-              <div className="logo" onClick={scrollToTop}>
+              <div className="logo">
                 <span>Aj</span>
                 aya
               </div>
@@ -51,15 +61,12 @@ function Navbar() {
                 >
                   <li className="nav-items ">
                     <a href="">
-
-                   
                       {" "}
                       Home <span></span>
                     </a>
-                 
                   </li>
                 </Link>
-               
+
                 <Link
                   activeClass="active"
                   to="about"
@@ -69,11 +76,9 @@ function Navbar() {
                   duration={1000}
                 >
                   <li className="nav-items">
-                  <a href="">
-                    
+                    <a href="">
                       About <span></span>
-                      </a>
-                 
+                    </a>
                   </li>
                 </Link>
                 <Link
@@ -85,11 +90,9 @@ function Navbar() {
                   duration={1000}
                 >
                   <li className="nav-items">
-                  <a href="">
-                  
+                    <a href="">
                       Skills <span></span>
-                      </a>
-               
+                    </a>
                   </li>
                 </Link>
                 <Link
@@ -101,11 +104,9 @@ function Navbar() {
                   duration={1000}
                 >
                   <li className="nav-items">
-                  <a href="">
-                   
+                    <a href="">
                       Education <span></span>
-                      </a>
-               
+                    </a>
                   </li>
                 </Link>
                 <Link
@@ -116,11 +117,9 @@ function Navbar() {
                   duration={1000}
                 >
                   <li>
-                  <a href="">
-                  
+                    <a href="">
                       Portfolio <span></span>
-                      </a>
-                
+                    </a>
                   </li>
                 </Link>
                 <Link
@@ -132,16 +131,18 @@ function Navbar() {
                   duration={1000}
                 >
                   <li>
-                  <a href="">
+                    <a href="">
                       Contact <span></span>
-                      </a>
-               
+                    </a>
                   </li>
                 </Link>
               </ul>
             </div>
           </div>
-          <div className="nav-container nav-container-visible " onClick={openNav}>
+          <div
+            className="nav-container nav-container-visible "
+            onClick={openNav}
+          >
             <input className="checkbox" type="checkbox" name="" id="" />
 
             <div className="hamburger-lines">
