@@ -18,7 +18,7 @@ function Portfolio() {
 
   const items = [
     {
-      Id: 1,
+      Id: 3,
       title: "Search Github-Users",
       type: "react",
       img: Githubuser,
@@ -64,7 +64,7 @@ function Portfolio() {
       website: "https://react-jobster.netlify.app",
     },
     {
-      Id: 3,
+      Id: 6,
       title: "Comfy",
       type: "javascript",
       img: Comfy,
@@ -132,11 +132,11 @@ function Portfolio() {
       github: "https://github.com/Ajkce/tours",
       website: "https://vanilla-js-backroad-project.netlify.app",
     }, {
-      Id: 6,
+      Id: 1,
       title: "Ecommerce App",
       type: "react",
       img: Comfy,
-      desc: "A sample ecommerce project created using vanilla js. It utilises javascript array funcation to search, filter, sort and select the products based on specific properties.",
+      desc: "A complete ecommerce application created using react js library. It utilizes react hooks, react router, react-redux any many other react functionalities. It has the functionalities like viewing products with grid or list layout, filter products, search functionality as well as cart and checkout functionality.",
       tools: [
         {
           id: 1,
@@ -148,7 +148,7 @@ function Portfolio() {
         },
         {
           id: 3,
-          name: "Javascript",
+          name: "React",
         },
       ],
       github: "https://github.com/Ajkce/Comfy",
