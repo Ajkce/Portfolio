@@ -1,16 +1,69 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./conect.scss";
-import connectImg from "../../img/contact.jpg";
+import connectImg from "../../img/email.png";
 import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
+import { ClipLoader } from "react-spinners";
+import { ToastContainer, toast } from "react-toastify";
 
 const Connect = () => {
+  const form = useRef();
+  const [isSent, setIsSent] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
   const {
     register,
     handleSubmit,
     watch,
+    resetField,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    setIsLoading(true);
+    return emailjs
+      .sendForm(
+        "service_iioz6y9",
+        "template_3ylmmfi",
+        form.current,
+        "AZb8hKLsB7O86I2wP"
+      )
+      .then(
+        (result) => {
+          setIsLoading(false);
+          setIsSent(true);
+          console.log(result.text);
+          resetField();
+          toast.success(
+            "Message Sent Sucessfully, I will get back to you shortly",
+            {
+              position: "top-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            }
+          );
+        },
+        (error) => {
+          setIsLoading(false);
+          resetField();
+          toast.error("Oops! Something went wrong please try again", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <div className="row connect-section">
       <div className="info">
@@ -26,7 +79,7 @@ const Connect = () => {
       </div>
       <div className="form">
         <div className="form-content">
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)} ref={form}>
             {/* register your input into the hook by invoking the "register" function */}
             <div className="form-section">
               <label htmlFor="name">Name</label>
@@ -43,6 +96,7 @@ const Connect = () => {
 
             {/* include validation with required or other standard HTML validation rules */}
             <div className="form-section">
+              <ToastContainer />
               <label htmlFor="email">Email</label>
               <input
                 type="email"
@@ -65,7 +119,15 @@ const Connect = () => {
               ></textarea>
               {errors.message && <span>Please enter your message</span>}
             </div>
-            <input type="submit" className="btn green-btn" />
+            <button type="submit" className="btn green-btn" disabled={isSent}>
+              {isLoading ? (
+                <ClipLoader size={15} color="white" />
+              ) : isSent ? (
+                "Sent"
+              ) : (
+                "Send"
+              )}
+            </button>
           </form>
         </div>
       </div>

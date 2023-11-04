@@ -12,6 +12,8 @@ import { ScrollTrigger } from "gsap/all";
 import { gsap } from "gsap";
 import Loader from "./Components/Loader/loader.jsx";
 import Connect from "./Components/connect/Connect";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [loading, setloading] = useState(false);
@@ -27,6 +29,7 @@ function App() {
     </div>
   ) : (
     <div className="App">
+      
       <div className="landing">
         <div className="landing-bg">
           <Navbar />

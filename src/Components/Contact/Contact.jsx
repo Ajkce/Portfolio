@@ -6,6 +6,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Connect from "../connect/Connect";
+import Talk from "../talk/Talk";
 
 function Contact() {
   gsap.registerPlugin(ScrollTrigger);
@@ -73,66 +74,14 @@ function Contact() {
             </ul>
           </div>
         </div>
+
+        {/* Contact Form */}
         <div className="row contact-info">
           <Connect></Connect>
         </div>
 
-        {/* COntact Form */}
-        <div className="row">
-          <div className="contact-form">
-            <form action="">
-              <div className="row">
-                <div className="w-50">
-                  <div className="input-group">
-                    <input
-                      type="text"
-                      placeholder="Name"
-                      className="input-control"
-                      name=""
-                      id=""
-                    />
-                  </div>
-                  <div className="input-group">
-                    <input
-                      type="email"
-                      placeholder="Email"
-                      className="input-control"
-                      name=""
-                      id=""
-                    />
-                  </div>
-                  <div className="input-group">
-                    <input
-                      type="text"
-                      placeholder="Subject"
-                      className="input-control"
-                      name=""
-                      id=""
-                    />
-                  </div>
-                </div>
-                <div className="w-50">
-                  <div className="input-group">
-                    <textarea
-                      name=""
-                      className="input-control"
-                      placeholder="Message"
-                      id=""
-                      cols="30"
-                      rows="10"
-                    ></textarea>
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="submit-btn">
-                  <button type="submit" className="btn green-btn">
-                    Send Message
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
+        <div className="project">
+          <Talk></Talk>
         </div>
       </div>
     </section>
