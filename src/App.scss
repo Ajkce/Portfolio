@@ -8,9 +8,7 @@
 //Gradient Background Colour
 
 .landing {
-
   background-color: #030f16;
-
 }
 .landing-bg {
   background: radial-gradient(
@@ -21,53 +19,50 @@
     radial-gradient(circle at 120% 0, #0d2973, hsla(0, 0%, 100%, 0) 25%),
     radial-gradient(circle at 92% 55%, #0d2973, hsla(0, 0%, 100%, 0) 25%),
     radial-gradient(circle at 50% 96%, #0d2973, hsla(0, 0%, 100%, 0) 25%);
-   
-  
 }
-
 
 .wrapper {
   max-width: 1200px;
   margin: auto;
 }
-.section-title{
+.section-title {
   margin-bottom: 30px;
 }
-.sub-title{
+.sub-title {
   font-size: 20px;
   font-weight: 600;
   color: var(--blue);
 }
 
-.main-title{
+.main-title {
   font-size: 35px;
   font-weight: 600;
   margin-top: 10px;
 }
-.main-title-dark{
+.main-title-dark {
   font-size: 35px;
   font-weight: 600;
   margin-top: 10px;
   color: var(--dark);
 }
-.section-title .line{
+.section-title .line {
   padding-top: 0px;
 }
-.section-title .line li{
+.section-title .line li {
   display: inline-block;
   background-color: var(--blue);
   border-radius: 50px;
   height: 3px;
 
-  &:nth-of-type(1){
+  &:nth-of-type(1) {
     width: 64px;
-    margin-right:3px;
+    margin-right: 3px;
   }
-  &:nth-of-type(2){
-    margin-right:4px;
+  &:nth-of-type(2) {
+    margin-right: 4px;
     width: 10px;
   }
-  &:nth-of-type(3){
+  &:nth-of-type(3) {
     width: 7px;
   }
 }
@@ -83,7 +78,10 @@ li {
   list-style: none;
 }
 
-a, a:hover, a:focus, a:active {
+a,
+a:hover,
+a:focus,
+a:active {
   text-decoration: none;
   color: inherit;
 }
@@ -112,13 +110,12 @@ a, a:hover, a:focus, a:active {
   justify-content: center;
 }
 
-.pb-100{
+.pb-100 {
   padding-bottom: 100px;
 }
-.pt-100{
+.pt-100 {
   padding-top: 100px;
 }
-
 
 .btn {
   padding: 15px 45px;
@@ -129,30 +126,34 @@ a, a:hover, a:focus, a:active {
   font-size: 16px;
   text-transform: capitalize;
   font-weight: 600;
-  
+  cursor: pointer;
 }
 .btn-yellow {
   background-color: var(--yellow);
   color: var(--dark);
 
-  &:hover{
+  &:hover {
     color: var(--white);
     z-index: 3;
   }
-
- 
 }
-.green-btn{
+.green-btn {
   background-color: var(--blue);
   color: var(--white);
-  &:hover{
+  &:hover {
     background-color: var(--primary);
   }
-
+}
+.green-btn {
+  background-color: rgb(5, 104, 5);
+  color: var(--white);
+  &:hover {
+    background-color: rgb(8, 73, 8);
+  }
 }
 
 .slidebtn::before {
-  content: '';
+  content: "";
   position: absolute;
   border-radius: 5px;
   top: 0;
@@ -164,8 +165,6 @@ a, a:hover, a:focus, a:active {
   transform: scaleX(0);
   transform-origin: left;
   z-index: -1;
-
-  
 }
 
 .slidebtn:hover::before,
@@ -176,10 +175,8 @@ a, a:hover, a:focus, a:active {
 
 .slidebtn {
   transition: color 300ms ease-in-out;
- z-index: 1;
- 
+  z-index: 1;
 }
-
 
 .slidebtn:hover,
 .slidebtn:focus {

@@ -11,10 +11,10 @@ import Skills from "./Components/Skills/Skills";
 import { ScrollTrigger } from "gsap/all";
 import { gsap } from "gsap";
 import Loader from "./Components/Loader/loader.jsx";
-
+import Connect from "./Components/connect/Connect";
 
 function App() {
-  const [loading, setloading] = useState(true)
+  const [loading, setloading] = useState(false);
   useEffect(() => {
     setTimeout(() => {
       setloading(false);
@@ -38,6 +38,7 @@ function App() {
         </div>
       </div>
       <Portfolio />
+
       <Contact />
       <div className="landing">
         <div className="landing-bg">

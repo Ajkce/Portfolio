@@ -1,0 +1,80 @@
+.connect-section {
+  color: black;
+  margin-top: 30px;
+  .info {
+    width: 50%;
+    h3 {
+      color: green;
+      font-weight: 900;
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+  }
+  .form {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+
+    .form-content {
+      height: 500px;
+      width: 500px;
+      box-shadow: 0px 0px 9px 5px rgba(10, 10, 10, 0.3);
+      border-radius: 15px;
+      padding: 35px;
+
+      .form-section {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+        span {
+          color: red;
+        }
+        label {
+          margin-bottom: 2px;
+        }
+        input {
+          padding: 10px 15px;
+          outline: none;
+          border: 1px solid gray;
+          border-radius: 5px;
+          font-size: 15px;
+
+          &:invalid {
+            border: 1px solid red;
+          }
+
+          &:focus {
+            border: 1px solid blue;
+          }
+
+          ::placeholder {
+            color: gray;
+          }
+        }
+        textarea {
+          padding: 10px 15px;
+          outline: none;
+          border: 1px solid gray;
+          border-radius: 5px;
+          font-size: 15px;
+
+          &:invalid {
+            border: 1px solid red;
+          }
+
+          &:focus {
+            border: 1px solid blue;
+          }
+
+          ::placeholder {
+            color: gray;
+          }
+        }
+      }
+    }
+  }
+  img {
+    width: 500px;
+    height: 500px;
+  }
+}

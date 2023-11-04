@@ -5,20 +5,18 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import EmailIcon from "@mui/icons-material/Email";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import Connect from "../connect/Connect";
 
 function Contact() {
   gsap.registerPlugin(ScrollTrigger);
-  const con1 = useRef()
- 
+  const con1 = useRef();
 
   useEffect(() => {
     const to = gsap.timeline({
       scrollTrigger: {
         trigger: con1.current,
-     
       },
     });
-   
 
     to.from(
       con1.current,
@@ -33,8 +31,9 @@ function Contact() {
 
       []
     )
-      .from(".card-wrapper",
-        
+      .from(
+        ".card-wrapper",
+
         {
           duration: 0.3,
           y: 200,
@@ -58,11 +57,7 @@ function Contact() {
 
         []
       );
-
-   
   }, []);
-
-
 
   return (
     <section className="contact-section" id="contact">
@@ -79,31 +74,7 @@ function Contact() {
           </div>
         </div>
         <div className="row contact-info">
-        <div className="card-wrapper">
-          <div className="card">
-            <CallIcon className="icon" />
-            <span className="phone-text">Phone</span>
-            <p className="phone-number">0452059032</p>
-          </div>
-          </div>
-          <div className="card-wrapper">
-            
-            
-          <div className="card">
-            <EmailIcon className="icon" />
-            <span className="phone-text">Email</span>
-            <p className="phone-number">kshettryajaya@gmail.com</p>
-          </div>
-          </div>
-          <div className="card-wrapper">
-            
-            
-          <div className="card">
-            <LocationOnIcon className="icon" />
-            <span className="phone-text">Adress</span>
-            <p className="phone-number">Canberra Act</p>
-          </div>
-          </div>
+          <Connect></Connect>
         </div>
 
         {/* COntact Form */}

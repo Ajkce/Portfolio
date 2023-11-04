@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import "animate.css";
 import "./Home.scss";
 import Coding from "../../img/coding.json";
-import Lottie from "react-lottie";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -11,6 +10,8 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import Letter from "../AnimatedLetters/Letter.jsx";
 import { gsap } from "gsap";
 import { Link, animateScroll as scroll } from "react-scroll";
+import Lottie from "lottie-react";
+import CodingLottie from "./lottie.json";
 
 function Home() {
   const defaultOptions = {
@@ -41,7 +42,6 @@ function Home() {
 
   useEffect(() => {
     const info = [info1.current, info2.current, info3.current];
- 
 
     const animatess = gsap.from(info, {
       opacity: 0,
@@ -58,8 +58,6 @@ function Home() {
       delay: 2,
       opacity: 0,
     });
-
-  
   }, []);
 
   useEffect(() => {
@@ -143,7 +141,7 @@ function Home() {
             </Link>
           </div>
           <div className="home-image" ref={lottie}>
-            <Lottie options={defaultOptions} height={500} width={500} />
+            <Lottie animationData={CodingLottie} loop={true}></Lottie>
           </div>
         </div>
       </div>
