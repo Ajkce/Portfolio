@@ -1,0 +1,45 @@
+.lets-talk {
+  color: black;
+  .info {
+    width: 50%;
+    padding-top: 60px;
+
+    h2 {
+      color: green;
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
+    .email {
+      margin-bottom: 30px;
+    }
+    .design {
+      width: 80%;
+      margin-bottom: 30px;
+    }
+  }
+  .image {
+    width: 50%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    img {
+      width: 500px;
+    }
+  }
+}
+
+@media (max-width: 862px) {
+  .lets-talk {
+    flex-direction: column;
+    .info {
+      width: 100%;
+    }
+    .image {
+      width: 100%;
+      justify-content: center;
+      img{
+        width: 90%;
+      }
+    }
+  }
+}
