@@ -13,6 +13,7 @@ import Comfy from "../../img/Comfy.PNG";
 import Jobster from "../../img/Jobster.PNG";
 import Jobify from "../../img/jobify.PNG";
 import Ecommerce from "../../img/Ecommerce.PNG";
+import Quill from "../../img/quill.jpg";
 
 function Portfolio() {
   gsap.registerPlugin(ScrollTrigger);
@@ -20,6 +21,29 @@ function Portfolio() {
   const items = [
     {
       Id: 1,
+      title: "Quill",
+      type: "Next JS",
+      img: Quill,
+      desc: "Quill Allows you to have conversations with any pdf document. Simply upload your file and start asking questions right away",
+      tools: [
+        {
+          id: 1,
+          name: "Next Auth",
+        },
+        {
+          id: 2,
+          name: "Open AI",
+        },
+        {
+          id: 3,
+          name: "Tailwind CSS",
+        },
+      ],
+      github: "https://github.com/Ajkce/Jobster",
+      website: "https://quill-pd7u.vercel.app/",
+    },
+    {
+      Id: 2,
       title: "Ecommerce App",
       type: "react",
       img: Ecommerce,
@@ -42,7 +66,7 @@ function Portfolio() {
       website: "https://ajaya-comfy.netlify.app",
     },
     {
-      Id: 5,
+      Id: 6,
       title: "Jobify",
       type: "node",
       img: Jobster,
@@ -64,9 +88,9 @@ function Portfolio() {
       github: "https://github.com/Ajkce/Comfy",
       website: "https://react-jobster.netlify.app",
     },
-    
+
     {
-      Id: 3,
+      Id: 4,
       title: "Search Github-Users",
       type: "react",
       img: Githubuser,
@@ -90,7 +114,7 @@ function Portfolio() {
     },
 
     {
-      Id: 6,
+      Id: 7,
       title: "Comfy",
       type: "javascript",
       img: Comfy,
@@ -112,9 +136,9 @@ function Portfolio() {
       github: "https://github.com/Ajkce/Comfy",
       website: "https://comfy-ajaya.netlify.app",
     },
-    
+
     {
-      Id: 4,
+      Id: 5,
       title: "Tours-project",
       type: "javascript",
       img: Backroad,
@@ -137,7 +161,7 @@ function Portfolio() {
       website: "https://vanilla-js-backroad-project.netlify.app",
     },
     {
-      Id: 2,
+      Id: 3,
       title: "jobster",
       type: "react",
       img: Jobify,
@@ -177,6 +201,14 @@ function Portfolio() {
     {
       id: 4,
       value: "node",
+    },
+    {
+      id: 5,
+      value: "typescript",
+    },
+    {
+      id: 6,
+      value: "Next JS",
     },
   ];
   const port1 = useRef();
@@ -446,7 +478,8 @@ function Portfolio() {
                         if (tool.id > 1) {
                           return (
                             <span key={tool.id}>
-                              {" / "}{tool.name} 
+                              {" / "}
+                              {tool.name}
                             </span>
                           );
                         } else {
