@@ -15,7 +15,7 @@ const Connect = () => {
     register,
     handleSubmit,
     watch,
-    resetField,
+    reset,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
@@ -32,7 +32,7 @@ const Connect = () => {
           setIsLoading(false);
           setIsSent(true);
           console.log(result.text);
-          resetField();
+          reset();
           toast.success(
             "Message Sent Sucessfully, I will get back to you shortly",
             {
@@ -49,7 +49,7 @@ const Connect = () => {
         },
         (error) => {
           setIsLoading(false);
-          resetField();
+          reset();
           toast.error("Oops! Something went wrong please try again", {
             position: "top-center",
             autoClose: 5000,
