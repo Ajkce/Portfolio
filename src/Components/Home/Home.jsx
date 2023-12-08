@@ -124,9 +124,9 @@ function Home() {
               Frontend Web Developer
             </h4>
             <p ref={info2}>
-              Passionate Web Developer with an Expertise of Building Web
-              Applications Using Javascript and React JS Including Some Other
-              Cool Libraries and Frameworks
+              Passionate Web Developer skilled in frontend and backend
+              technologies, dedicated to crafting innovative web solutions and
+              aspiring to become a Full Stack Developer.
             </p>
             <Link
               to="contact"

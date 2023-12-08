@@ -54,7 +54,7 @@ function About() {
           <div className="about-content" ref={info}>
             <div className="section-title">
               <h5 className="sub-title">About</h5>
-              <h3 className="main-title">Why Hire Me ?</h3>
+              <h3 className="main-title">About Me ?</h3>
               <ul className="line">
                 <li></li>
                 <li></li>
@@ -63,18 +63,21 @@ function About() {
             </div>
 
             <p>
-              I am a frontend developer from canberra Australia.I develop hignly
-              interactive front end web application using popular languages and
-              framework like javascript, react js and node js. I love using
-              modern technology to create exceptional user experiences, and
-              always strive to create high quality products.  I have recently
-              completed bachelors of information technology major on web design
-              and development and currently seeking for opportunities to bring
-              my ideas and skills that i have gained to use. 
+              Enthusiastic Web Developer with more than 1 year of experience in
+              designing and implementing innovative web solutions. Proven
+              expertise in front-end and back-end development, with a passion
+              for staying updated on emerging technologies. Excited to
+              contribute technical proficiency and creative problem-solving
+              skills to a dynamic development team. Currently specializing in
+              both frontend and backend technologies like JavaScript,
+              Typescript, and React JS, React Native, Python, Node JS with a
+              keen eye on becoming a Full Stack Developer.
             </p>
 
             <button className="btn btn-yellow slidebtn downloadbtn">
-              Download CV <DownloadIcon className="download" />
+              <a href="./AJ_CV.docx">
+                Download CV <DownloadIcon className="download" />
+              </a>
             </button>
           </div>
         </div>
