@@ -14,6 +14,7 @@ import Jobster from "../../img/Jobster.PNG";
 import Jobify from "../../img/jobify.PNG";
 import Ecommerce from "../../img/Ecommerce.PNG";
 import Quill from "../../img/quill.jpg";
+import Cinema from "../../img/movie.JPG";
 
 function Portfolio() {
   gsap.registerPlugin(ScrollTrigger);
@@ -64,6 +65,29 @@ function Portfolio() {
       ],
       github: "https://github.com/Ajkce/Comfy",
       website: "https://ajaya-comfy.netlify.app",
+    },
+    {
+      Id: 3,
+      title: "Cinema",
+      type: "typescript",
+      img: Cinema,
+      desc: "An innovative movie website that excels in listing, searching, and filtering movies. This project showcases my proficiency in front-end technologies, user-centric design, and effective data management, offering users a seamless and interactive movie exploration experience.",
+      tools: [
+        {
+          id: 1,
+          name: "Typescript",
+        },
+        {
+          id: 2,
+          name: "React Query",
+        },
+        {
+          id: 3,
+          name: "SCSS",
+        },
+      ],
+      github: "https://github.com/Ajkce/cinema",
+      website: "https://ajaya-cinema.netlify.app/",
     },
     {
       Id: 6,
@@ -161,7 +185,7 @@ function Portfolio() {
       website: "https://vanilla-js-backroad-project.netlify.app",
     },
     {
-      Id: 3,
+      Id: 8,
       title: "jobster",
       type: "react",
       img: Jobify,
