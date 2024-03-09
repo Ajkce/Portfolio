@@ -121,7 +121,7 @@ function Home() {
               </span>
             </h3>
             <h4 ref={info1} className="profession">
-              Frontend Web Developer
+              Web Developer
             </h4>
             <p ref={info2}>
               Passionate Web Developer skilled in frontend and backend
